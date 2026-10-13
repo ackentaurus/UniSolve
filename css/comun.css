@@ -1,0 +1,16 @@
+/* Ajustes mínimos sobre AdminLTE: todo lo demás (colores, tarjetas, tablas) viene del tema */
+.descripcion {
+     white-space: pre-wrap;
+     }
+.foto-incidencia { 
+    max-height: 360px;
+ }
+.brand-link {
+     display: flex; align-items: center;
+     }
+.user-menu .user-header { 
+    height: auto; padding: 1rem;
+ }
+.user-menu .user-header p small {
+     display: block; 
+    }

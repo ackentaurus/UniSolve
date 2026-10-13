@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>UniSolve</title>
+    <script>
+        // Punto de entrada: si hay sesión va a consultar, si no, al login
+        location.replace(localStorage.getItem("sesion") ? "consultar.html" : "login.html");
+    </script>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,13 @@
+/* Consultar incidencias */
+.desc-corta {
+     max-width: 340px;
+      overflow: hidden; 
+      text-overflow: ellipsis;
+       white-space: nowrap; 
+    }
+#tablaIncidencias.sin-autor .col-autor {
+     display: none; 
+    }
+.info-box {
+     margin-bottom: 1rem; 
+    }

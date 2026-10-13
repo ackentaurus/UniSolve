@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios | UniSolve</title>
+    <script src="js/tema.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="adminlte/css/adminlte.min.css">
+    <link rel="stylesheet" href="css/comun.css">
+    <link rel="stylesheet" href="css/usuarios.css">
+</head>
+<body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+    <div class="app-wrapper">
+        <nav class="app-header navbar navbar-expand bg-body" id="appHeader"></nav>
+        <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark" id="appSidebar"></aside>
+
+        <main class="app-main">
+            <div class="app-content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h1 class="mb-0 fs-3">Usuarios del sistema</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-end">
+                                <li class="breadcrumb-item"><a href="consultar.html">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Usuarios</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-content">
+                <div class="container-fluid">
+                    <div id="mensaje" class="alert" hidden></div>
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <div class="card">
+                                <div class="card-header"><h3 class="card-title">Usuarios registrados</h3></div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover align-middle">
+                                            <thead><tr><th>Usuario</th><th>Nombre</th><th>Rol</th><th>Incidencias</th><th>Estado</th><th></th></tr></thead>
+                                            <tbody id="tablaUsuarios"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <form class="card card-primary card-outline" id="formUsuario">
+                                <div class="card-header"><h3 class="card-title">Crear usuario</h3></div>
+                                <div class="card-body">
+                                    <label for="nuevoUsuario" class="form-label">Usuario</label>
+                                    <input type="text" id="nuevoUsuario" class="form-control" maxlength="20" required>
+                                    <label for="nuevoNombre" class="form-label mt-3">Nombre completo</label>
+                                    <input type="text" id="nuevoNombre" class="form-control" maxlength="60" required>
+                                    <label for="nuevaClave" class="form-label mt-3">Contraseña</label>
+                                    <input type="password" id="nuevaClave" class="form-control" required>
+                                    <label for="nuevoRol" class="form-label mt-3">Rol</label>
+                                    <select id="nuevoRol" class="form-select"></select>
+                                    <div id="campoArea" hidden>
+                                        <label for="nuevaArea" class="form-label mt-3">Área responsable</label>
+                                        <select id="nuevaArea" class="form-select"></select>
+                                    </div>
+                                </div>
+                                <div class="card-footer"><button class="btn btn-primary" type="submit"><i class="bi bi-person-plus me-1"></i>Crear usuario</button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <div class="float-end d-none d-sm-inline">Desarrollo Web Full Stack · Ciclo IV</div>
+            <strong>UniSolve</strong> · Universidad Nacional de Cañete · 2026
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+    <script src="adminlte/js/adminlte.min.js"></script>
+    <script src="js/comun.js"></script>
+    <script src="js/usuarios.js"></script>
+</body>
+</html>

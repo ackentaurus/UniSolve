@@ -1,0 +1,115 @@
+/* Detalle de incidencia: indicador de avance y seguimiento */
+.estado-pasos {
+    list-style: none;
+    display: flex;
+    gap: .75rem;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    position: relative;
+}
+
+.estado-pasos li {
+    flex: 1;
+    position: relative;
+    text-align: center;
+    font-size: .82rem;
+    color: var(--bs-secondary-color);
+    line-height: 1.3;
+}
+
+.estado-pasos li::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -50%;
+    width: 100%;
+    height: 3px;
+    background: var(--bs-secondary-bg);
+    z-index: 0;
+}
+
+.estado-pasos li:first-child::before {
+    display: none;
+}
+
+.estado-pasos li span {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto .45rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background: var(--bs-secondary-bg);
+    border: 2px solid transparent;
+    color: var(--bs-body-color);
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.7);
+}
+
+.estado-pasos li span i {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.estado-pasos li.hecho span {
+    background: var(--bs-success);
+    border-color: rgba(25, 135, 84, 0.3);
+    color: #fff;
+}
+
+.estado-pasos li.hecho::before,
+.estado-pasos li.actual::before {
+    background: linear-gradient(90deg, var(--bs-success), var(--bs-primary));
+}
+
+.estado-pasos li.actual span {
+    background: var(--bs-primary);
+    border-color: rgba(13, 110, 253, 0.2);
+    color: #fff;
+    box-shadow: 0 0 0 5px rgba(13, 110, 253, 0.14);
+}
+
+.estado-pasos li.actual {
+    color: var(--bs-body-color);
+    font-weight: 600;
+}
+
+.estado-pasos li.hecho {
+    color: var(--bs-success);
+    font-weight: 600;
+}
+
+.comentario {
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    border-radius: .5rem;
+}
+
+.comentario.sistema {
+    background: var(--bs-tertiary-bg);
+    color: var(--bs-secondary-color);
+    border-left: 4px solid var(--bs-info);
+}
+
+.comentario small {
+    color: var(--bs-secondary-color);
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.comentario small i {
+    font-size: .9rem;
+}
+
+.comentario .bi {
+    color: var(--bs-primary);
+}
+
+.comentario.sistema .bi {
+    color: var(--bs-info);
+}

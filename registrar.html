@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar incidencia | UniSolve</title>
+    <script src="js/tema.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="adminlte/css/adminlte.min.css">
+    <link rel="stylesheet" href="css/comun.css">
+    <link rel="stylesheet" href="css/registrar.css">
+</head>
+<body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+    <div class="app-wrapper">
+        <nav class="app-header navbar navbar-expand bg-body" id="appHeader"></nav>
+        <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark" id="appSidebar"></aside>
+
+        <main class="app-main">
+            <div class="app-content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h1 class="mb-0 fs-3">Registrar incidencia</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-end">
+                                <li class="breadcrumb-item"><a href="consultar.html">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Registrar</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <form class="card card-primary card-outline needs-validation" id="formIncidencia" novalidate>
+                                <div class="card-header"><h3 class="card-title">Datos de la incidencia</h3></div>
+                                <div class="card-body">
+                                    <div id="mensaje" class="alert" hidden></div>
+
+                                    <label for="titulo" class="form-label">Título</label>
+                                    <input type="text" id="titulo" class="disable-adminlte-validations form-control" maxlength="80" required>
+                                    <div class="invalid-feedback">Escribe un título para la incidencia.</div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="categoria" class="form-label mt-3">Categoría</label>
+                                            <select id="categoria" class="disable-adminlte-validations form-select" required></select>
+                                            <div class="invalid-feedback">Selecciona una categoría.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="ubicacion" class="form-label mt-3">Ubicación</label>
+                                            <input type="text" id="ubicacion" class="disable-adminlte-validations form-control" placeholder="Ej: Pabellón B, aula 203" required>
+                                            <div class="invalid-feedback">Indica dónde ocurrió la incidencia.</div>
+                                        </div>
+                                    </div>
+
+                                    <label for="descripcion" class="form-label mt-3">Descripción</label>
+                                    <textarea id="descripcion" class="disable-adminlte-validations form-control" rows="4" required></textarea>
+                                    <div class="invalid-feedback">Describe el problema.</div>
+
+                            <label for="foto" class="form-label mt-3">Fotografía de evidencia <span class="text-secondary">(opcional)</span></label>
+                            <input type="file" id="foto" class="disable-adminlte-validations form-control" accept="image/*">
+                            <div class="text-danger small" id="errorFoto"></div>
+                            <img id="vistaPrevia" class="vista-previa img-fluid rounded border mt-2" alt="Vista previa de la fotografía" hidden>
+                            <div><button type="button" id="btnQuitarFoto" class="btn btn-sm btn-outline-danger mt-2" hidden><i class="bi bi-x-lg me-1"></i>Quitar fotografía</button></div>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-primary" type="submit"><i class="bi bi-send me-1"></i>Registrar</button>
+                                    <a class="btn btn-secondary" href="consultar.html">Volver</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-header"><h3 class="card-title">¿Qué pasa después?</h3></div>
+                                <div class="card-body">
+                                    <p>Tu incidencia quedará en estado <span class="badge text-bg-warning">Pendiente</span> hasta que el administrador la asigne a un área.</p>
+                                    <ol class="flujo">
+                                        <li><strong>Registro</strong> de la incidencia</li>
+                                        <li><strong>Validación</strong> por el administrador</li>
+                                        <li><strong>Asignación</strong> al área responsable</li>
+                                        <li><strong>Atención</strong> y solución</li>
+                                        <li><strong>Cierre</strong> al confirmar la solución</li>
+                                    </ol>
+                                    <p class="mb-0 text-secondary small">Podrás seguirla y comentarla desde "Incidencias".</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <div class="float-end d-none d-sm-inline">Desarrollo Web Full Stack · Ciclo IV</div>
+            <strong>UniSolve</strong> · Universidad Nacional de Cañete · 2026
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+    <script src="adminlte/js/adminlte.min.js"></script>
+    <script src="js/comun.js"></script>
+    <script src="js/registrar.js"></script>
+</body>
+</html>
